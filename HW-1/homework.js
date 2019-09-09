@@ -27,7 +27,7 @@ range(15,30)
 
     //ФУНКЦИИ
 let average = (a,b) => {
-  console.log(a+b);
+  console.log((a+b)/2);
 }
 
 let square = x => {

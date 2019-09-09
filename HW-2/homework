@@ -1,0 +1,43 @@
+    //ПОДНЯТИЕ
+let hoisting = () => {
+  console.log(a);
+  // let a = 10; -- error
+  var a = 10;
+}
+hoisting()
+
+    //СКАЛЯРНЫЕ И ССЫЛОЧНЫЕ ТИПЫ ДАННЫХ
+let inc = (n) => {
+  return n+1;
+}
+const a = 5;
+const b = inc(a);
+console.dir({a,b});
+
+let inc2 = (n) => {
+  return n.n+1;
+}
+const c = {n: 5};
+console.dir(inc2(c));
+
+    //ТИПЫ ОБЪЕКТОВ
+let arr = [true, 'hello', 5, 12, false, 'word', [0,1], {number: 'error'}, true, null, [0,1], {bool: '1234'}, undefined];
+let typeOffArr = {
+  'boolean': 0,
+  'number': 0,
+  'string': 0,
+  'object': 0,
+  'undefined': 0
+};
+
+for (const element of arr) {
+  typeOffArr[typeof element]++;
+}
+console.log(typeOffArr);
+
+let typeOffArr2 = {};
+
+for (const element of arr) {
+  typeOffArr2[typeof element] ? typeOffArr2[typeof element]++ : typeOffArr2[typeof element] = 1;
+}
+console.log(typeOffArr2);
